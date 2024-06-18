@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LOL OverPy</title>
+        <link rel="stylesheet" href="../css/submit.css">
+    </head>
+    <body>
+        <form id="form">
+            <table>
+                <tr>
+                    <td>
+                        <label for="blue">Blue Team</label><br>
+                        <input type="text" id="blue" name="blue" value="blue"><br>
+                    </td>
+                    <td>
+                        <label for="blueScore">Blue Score</label><br>
+                        <input type="number" id="blueScore" name="blueScore" value="blueScore"><br>
+                    </td>
+                </tr>
+                    <td>
+                        <label for="red">Red Team</label><br>
+                        <input type="text" id="red" name="red" value="red"><br>
+                    </td>
+                    <td>
+                        <label for="redScore">Red Score</label><br>
+                        <input type="number" id="redScore" name="redScore" value="redScore"><br>
+                    </td>
+                <tr>
+                    <td>
+                        <label for="patch">Patch Number</label><br>
+                        <input type="text" id="patch" name="patch" value="patch"><br>
+                    </td>
+                </tr>
+            </table>
+
+            <br>
+            <label for="swap">Swap?</label>
+            <input type="checkbox" id="swap" name="swap" value="false">
+            <br><br>
+            <input id="submit" type="submit" value="Submit">
+        </form>
+        <script src="data.js"></script>
+    </body>
+</html>

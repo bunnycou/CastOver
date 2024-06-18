@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Smash OverPy</title>
+        <link rel="stylesheet" href="static/submit.css">
+        <script>
+            function submitForm() {
+              document.getElementById("mainForm").submit();
+            }
+        </script>
+    </head>
+    <body>
+        <form id="mainForm" action="/smash-1v1-submit" method="POST">
+            <table>
+                <tr>
+                    <td>
+                        <label for="player1">Player 1</label><br>
+                        <input type="text" id="player1" name="player1" value="{{ player1 }}"><br>
+                    </td>
+                    <td>
+                        <label for="player2">Player 2</label><br>
+                        <input type="text" id="player2" name="player2" value="{{ player2 }}"><br>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <label for="swap">Swap?</label>
+            <input type="checkbox" id="swap" name="swap" value="false">
+            <br><br>
+            <input id="submit" type="submit" value="Submit">
+        </form>
+    </body>
+</html>

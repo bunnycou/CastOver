@@ -1,0 +1,21 @@
+body {
+    background-color: #2b2e38;
+}
+
+label {
+    color: white;
+}
+
+input {
+    color: white;
+    background-color: #191b26;
+    width: 50px;
+}
+
+p {
+    color: white;
+}
+
+input#submit {
+    width: 60px;
+}

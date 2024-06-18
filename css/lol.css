@@ -1,0 +1,165 @@
+:root { /* Configurable properties */
+    --blue: #0099e0; /* Left Team */
+    --red: #e83d3d; /* Right Team */
+    --accent: #00aeff; /* accent color */
+    --font-fam: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font */
+    --font-color: #fff;
+
+    /* Vars to not be touched!!! */
+    --draft_titleEdgeOffset: 16.5vw;
+    --border: 0 0 6% 6%;
+}
+
+body {
+    background-color: transparent;
+    margin: 0;
+}
+
+p {
+    font-family: var(--font-fam);
+    color: var(--font-color);
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+div {
+    margin: 0;
+}
+
+/* DRAFT */
+
+div.draft_titleBlock {
+    width: 14vw;
+	height: 9vh;
+    position: absolute;
+    border-radius: var(--border);
+}
+
+p.draft_titleBlock{
+    font-size: 6vh;
+}
+
+div.draft_scoreBlock {
+    width: 3vw;
+    height: 7vh;
+    position: relative;
+    top: 8vh;
+    border-radius: var(--border);
+}
+
+p.draft_scoreBlock {
+    font-size: 4vh;
+    top: 1vh;
+}
+
+div#draft_titleBlockBlue {
+	/* transform: skew(20deg); */
+    background: var(--blue);
+    left: var(--draft_titleEdgeOffset);
+}
+
+div#draft_scoreBlockBlue {
+    background: var(--blue);
+}
+
+div#draft_titleBlockRed {
+    background: var(--red);
+    right: var(--draft_titleEdgeOffset);
+}
+
+div#draft_scoreBlockRed {
+    background: var(--red);
+    float: right;
+}
+
+div#draft_bottom {
+    width: 100%;
+    height: 35vh;
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(to top, var(--accent) 70%, rgba(0,0,0,0));
+}
+
+p#draft_game {
+    font-size: 8vh;
+    top: 10vh;
+    height: 40%;
+}
+
+p#draft_patch {
+    font-size: 8vh;
+    height: 40%;
+    bottom: 0;
+}
+
+/* IN GAME */
+
+div.game_titleBlock {
+    width: 14vw;
+	height: 5.6vh;
+    position: absolute;
+    border-radius: var(--border);
+}
+
+p.game_titleBlock{
+    font-size: 4vh;
+}
+
+div.game_scoreBlock {
+    width: 3vh;
+    height: 3vh;
+    position: relative;
+    top: 4.1vh;
+    border-radius: 50%;
+}
+
+p.game_scoreBlock {
+    font-size: 2vh;
+    top: 0.2vh;
+}
+
+div#game_titleBlockBlue {
+	/* transform: skew(20deg); */
+    background: var(--blue);
+    left: 10.4vw
+}
+
+div#game_scoreBlockBlue {
+    background: var(--blue);
+    right: -1.5vh;
+    float: right;
+}
+
+div#game_titleBlockRed {
+    background: var(--red);
+    right: 9.7vw
+}
+
+div#game_scoreBlockRed {
+    background: var(--red);
+    left: -1.5vh;
+}
+
+div#game_bottom {
+    width: 16vw;
+    height: 11vh;
+    position: absolute;
+    bottom: 0;
+    /* border-top-right-radius: 6%; */
+    background: var(--accent);
+}
+
+p#game_game {
+    font-size: 4vh;
+    height: 40%;
+}
+
+p#game_patch {
+    font-size: 4vh;
+    height: 40%;
+    bottom: 1.4vh;
+}
