@@ -47,7 +47,7 @@
                 return Httpreq.responseText;
             }
 
-            document.getElementById("game_patch").textContent = JSON.parse(Get("https://ddragon.leagueoflegends.com/api/versions.json"))[0].split(".").slice(0,2).join(".");
+            document.getElementById("patch").value = JSON.parse(Get("https://ddragon.leagueoflegends.com/api/versions.json"))[0].split(".").slice(0,2).join(".");
         </script>
         <script src="data.js"></script>
     </body>
