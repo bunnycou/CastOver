@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>LOL OverPy</title>
+        <title>BL Overlay</title>
         <link rel="stylesheet" href="../css/submit.css">
     </head>
     <body>
@@ -10,45 +10,38 @@
                 <tr>
                     <td>
                         <label for="blue">Blue Team</label><br>
-                        <input type="text" id="blue" name="blue" value="blue"><br>
+                        <input type="text" id="blue" name="blue" value="blue">
                     </td>
                     <td>
                         <label for="blueScore">Blue Score</label><br>
-                        <input type="number" id="blueScore" name="blueScore" value="blueScore"><br>
+                        <input type="number" min="0" id="blueScore" name="blueScore" value="0">
                     </td>
                 </tr>
                     <td>
                         <label for="red">Red Team</label><br>
-                        <input type="text" id="red" name="red" value="red"><br>
+                        <input type="text" id="red" name="red" value="red">
                     </td>
                     <td>
                         <label for="redScore">Red Score</label><br>
-                        <input type="number" id="redScore" name="redScore" value="redScore"><br>
+                        <input type="number" min="0" id="redScore" name="redScore" value="0">
                     </td>
                 <tr>
                     <td>
                         <label for="patch">Patch Number</label><br>
-                        <input type="text" id="patch" name="patch" value="patch"><br>
+                        <input type="text" id="patch" name="patch" value="10.10">
+                    </td>
+                </tr>
+                <tr style="height: 1em;"></tr>
+                <tr>
+                    <td>
+                        <input id="submit" type="submit" value="Submit">
+                    </td>
+                    <td>
+                        <input id="swap" type="submit" value="Swap">
                     </td>
                 </tr>
             </table>
-
-            <br>
-            <label for="swap">Swap?</label>
-            <input type="checkbox" id="swap" name="swap" value="false">
-            <br><br>
-            <input id="submit" type="submit" value="Submit">
         </form>
-        <script>
-            function Get(url){
-                var Httpreq = new XMLHttpRequest(); // a new request
-                Httpreq.open("GET",url,false);
-                Httpreq.send(null);
-                return Httpreq.responseText;
-            }
-
-            document.getElementById("patch").value = JSON.parse(Get("https://ddragon.leagueoflegends.com/api/versions.json"))[0].split(".").slice(0,2).join(".");
-        </script>
         <script src="data.js"></script>
     </body>
 </html>

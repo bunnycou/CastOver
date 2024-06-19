@@ -10,7 +10,6 @@ if (!blueScore) { blueScore = "0" }
 if (!redName) { redName = "Red" }
 if (!redScore) { redScore = "0" }
 if (!game) { game = "Game 1" } else { game = "Game " + game }
-if (patch == "Latest") { patch = "Latest Patch" }
 if (!patch) { patch = "Latest Patch" } else { patch = "Patch " + patch }
 
 document.getElementById("blueTeam").textContent = blueName
