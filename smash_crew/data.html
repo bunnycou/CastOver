@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Smash Crew Overlay</title>
+        <link rel="stylesheet" href="../css/submit.css">
+    </head>
+    <body>
+        <form id="form">
+            <table>
+                <tr>
+                    <td>
+                        <label>Red Team</label><br>
+                        <input type="text" id="redTeam" value="red">
+                    </td>
+                    <td>
+                        <label>Blue Team</label><br>
+                        <input type="text" id="blueTeam" value="blue">
+                    </td>
+                </tr>
+                    <td>
+                        <label>Red Score</label><br>
+                        <input type="number" id="redScore" min="0" value="0">
+                    </td>
+                    <td>
+                        <label>Blue Score</label><br>
+                        <input type="number" id="blueScore" min="0" value="0">
+                    </td>
+                <tr>
+                    <td>
+                        <label>Red Stocks</label><br>
+                        <input type="number" id="redStocks" min="0" max="12" value="12">
+                    </td>
+                    <td>
+                        <label>Blue Stocks</label><br>
+                        <input type="number" id="blueStocks" min="0" max="12" value="12">
+                    </td>
+                </tr>
+                <tr style="height: 1em;"></tr>
+                <tr>
+                    <td>
+                        <input id="submit" type="submit" value="Submit">
+                    </td>
+                    <td>
+                        <input id="swap" type="submit" value="Swap">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <script src="data.js"></script>
+    </body>
+</html>
