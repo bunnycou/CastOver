@@ -22,7 +22,7 @@ function load() {
     document.getElementById("redStocks").textContent = redStocks
     document.getElementById("blueStocks").textContent = blueStocks
     document.getElementById("redPlayers").textContent = playerString(redPlayers)
-    document.getElementById("bluePlayers").textContent = playerString(bluePlayers)
+    document.getElementById("bluePlayers").textContent = playerString(bluePlayers).split("").reverse().join("")
 }
 
 setInterval(load, 1000)
