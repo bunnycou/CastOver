@@ -69,6 +69,8 @@ function swapVars() {
     localStorage.setItem("blueScore", blueScore)
     localStorage.setItem("redStocks", redStocks)
     localStorage.setItem("blueStocks", blueStocks)
+    localStorage.setItem("redPlayers", Math.ceil(redStocks/3))
+    localStorage.setItem("bluePlayers", Math.ceil(blueStocks/3))
     localStorage.setItem("game", parseInt(blueScore)+parseInt(redScore)+1)
     
     loadVars();
