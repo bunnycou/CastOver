@@ -21,7 +21,7 @@ function load() {
     document.getElementById("game_patch").textContent = patch
 }
 
-setInterval(load, 5000)
+setInterval(load, 1000)
 
 function getLatest() {
     return JSON.parse(Get("https://ddragon.leagueoflegends.com/api/versions.json"))[0].split(".").slice(0,2).join(".");
