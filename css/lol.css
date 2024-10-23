@@ -86,7 +86,7 @@ div#draft_bottom {
 
 p#draft_game {
     font-size: 8vh;
-    top: 0;
+    bottom: 10vh;
     height: 40%;
 }
 
