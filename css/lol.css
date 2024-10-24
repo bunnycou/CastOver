@@ -87,12 +87,13 @@ div#draft_bottom {
 p#draft_game {
     font-size: 8vh;
     height: 40%;
+    top: 4vh;
 }
 
 p#draft_patch {
     font-size: 8vh;
     height: 40%;
-    bottom: 0;
+    bottom: 4vh;
 }
 
 /* IN GAME */
