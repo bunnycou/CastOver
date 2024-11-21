@@ -1,13 +1,17 @@
 :root { /* Configurable properties */
     --blue: #0099e0; /* Left Team */
     --red: #e83d3d; /* Right Team */
-    --accent: #00aeff; /* accent color */
+    --accent: #0A1428; /* accent color */
+    --background: #1E2328;
     --font-fam: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font */
     --font-color: #fff;
 
     /* Vars to not be touched!!! */
     --draft_titleEdgeOffset: 16.5vw;
     --border: 0 0 6% 6%;
+    --border-inverse: 6% 6% 0 0;
+    --border-botright: 0 6% 0 0; /* doesn't work i dunno why */
+    --border-all: 6% 6% 6% 6%;
 }
 
 body {
@@ -84,13 +88,13 @@ div#draft_bottom {
     background-color: var(--accent);
 }
 
-p#draft_game {
+p.draft_game {
     font-size: 8vh;
     height: 40%;
-    top: 4vh;
+    top: 1vh;
 }
 
-p#draft_patch {
+p.draft_patch {
     font-size: 8vh;
     height: 40%;
     bottom: 4vh;
@@ -123,7 +127,6 @@ p.game_scoreBlock {
 }
 
 div#game_titleBlockBlue {
-	/* transform: skew(20deg); */
     background: var(--blue);
     left: 10.4vw
 }
@@ -144,22 +147,110 @@ div#game_scoreBlockRed {
     left: -1.5vh;
 }
 
-div#game_bottom {
+div.game_bottom {
     width: 16vw;
     height: 11vh;
     position: absolute;
     bottom: 0;
-    /* border-top-right-radius: 6%; */
+    border: var(--border-botright);
     background: var(--accent);
 }
 
-p#game_game {
+p.game_game {
     font-size: 4vh;
     height: 40%;
 }
 
-p#game_patch {
+p.game_patch {
     font-size: 4vh;
     height: 40%;
     bottom: 1.4vh;
+}
+
+/* Between Games/Score screen */
+body.score_body {
+    background: var(--background);
+}
+
+div.score_blueMain {
+    position: absolute;
+
+    top: 55vh;
+    left: 16vw;
+
+    width: 18vw;
+    height: 12vh;
+
+    background: var(--blue);
+
+    border-radius: var(--border-all);
+}
+
+div.score_blueScore {
+    position: absolute;
+
+    top: 68vh;
+    left: 21vw;
+
+    width: 8vw;
+    height: 16vh;
+
+    background: var(--blue);
+
+    border-radius: var(--border-all);
+}
+
+div.score_redMain {
+    position: absolute;
+    
+    top: 55vh;
+    right: 16vw;
+
+    width: 18vw;
+    height: 12vh;
+
+    background: var(--red);
+
+    border-radius: var(--border-all);
+}
+
+div.score_redScore {
+    position: absolute;
+
+    top: 68vh;
+    right: 21vw;
+
+    width: 8vw;
+    height: 16vh;
+
+    background: var(--red);
+
+    border-radius: var(--border-all);
+}
+
+p.score_name {
+    margin-top: -1vh;
+    font-size: 10vh;
+}
+
+p.score_score {
+    font-size: 12vh;
+}
+
+div.score_patch {
+    position: absolute;
+
+    bottom: 0;
+    left: 40vw;
+
+    width: 20vw;
+    height: 8vh;
+
+    background: var(--accent);
+
+    border-radius: var(--border-inverse);
+}
+
+p.score_patch {
+    font-size: 5vh;
 }
