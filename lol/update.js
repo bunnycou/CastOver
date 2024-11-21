@@ -13,12 +13,12 @@ function load() {
     if (!game) { game = "Game 1" } else { game = "Game " + game }
     if (!patch) { patch = "Patch " + getLatest() } else { patch = "Patch " + patch }
 
-    document.getElementById("blueTeam").textContent = blueName
-    document.getElementById("blueScore").textContent = blueScore
-    document.getElementById("redTeam").textContent = redName
-    document.getElementById("redScore").textContent = redScore
-    document.getElementById("patch").textContent = patch
-    document.getElementById("game").textContent = game
+    try { document.getElementById("blueTeam").textContent = blueName } catch (error) { console.log("No blueTeam display") }
+    try { document.getElementById("blueScore").textContent = blueScore } catch (error) { console.log("No blueScore display") }
+    try { document.getElementById("redTeam").textContent = redName } catch (error) { console.log("No redTeam display") }
+    try { document.getElementById("redScore").textContent = redScore } catch (error) { console.log("No redScore display") }
+    try { document.getElementById("game").textContent = game } catch (error) { console.log("No game num display") }
+    try { document.getElementById("patch").textContent = patch } catch (error) { console.log("No patch display") }
 }
 
 setInterval(load, 1000)
